@@ -1,0 +1,111 @@
+Slide 1
+Nós já usamos funções no Python, às vezes sem perceber.
+
+Slide 2
+As funções server para organizar o código de uma maneira mais eficiente, e para conseguir realizar o mesmo procedimento mais de uma vez, sem precisar repetir o código.
+
+Slide 3
+Mas a gente não aprendeu o FOR pra isso?
+
+Slide 4
+No for nós realizamos várias análises ou ações, sobre uma determinada situação, sem precisar repetir códigos, mas em determinados momentos, temos que aplicar uma ação quando um requisito é cumprido, e tal ação vai se repetindo várias vezes. EX.: Um cálculo de aumento de imposto ou salário.
+
+Slide 5
+Além disso, a organização do código separadamente, em pedaços, permite uma melhor manutenção.
+
+Slide 6
+Evita que o seu código seja um conglomerado de IF, ELSE, FOR, CASE
+
+Slide 7
+Imagine uma lista de Preços, e aplique os impostos usando for
+precos = [1500, 1100, 1000, 3000]
+#aliquota1 = IR = 0.2
+#aliquota2 = ISS = 0.15
+#aliquota3 = CSLL = 0.05
+
+
+Slide 8
+precos = [1500, 1100, 1000, 3000]
+
+#aliquota1 = IR = 0.2
+#aliquota2 = ISS = 0.15
+#aliquota3 = CSLL = 0.05
+
+for preco in precos:
+    imposto_ir = 0.2 * preco
+    imposto_iss = 0.15 * preco
+    imposto_csll = 0.05 * preco
+
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    """imposto_total = (0.2 * preco)+(0.15 * preco)+(0.05 * preco)"""
+    print(imposto_total)
+
+
+Slide 09
+Mas e se eu tivesse que adicionar a seguinte regra: Se o preço do produto for acima de 2000 a aliquota do IR é 0.3
+
+for preco in precos:
+    if preco > 2000:
+        imposto_ir = 0.3 * preco
+    else:
+        imposto_ir = 0.2 * preco
+    imposto_iss = 0.15 * preco
+    imposto_csll = 0.05 * preco
+
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    print(imposto_total)
+
+
+Slide 10
+
+E se eu tivesse uma nova lista e tivesse que fazer os mesmos cálculos, então teria que repetir todo o código de novo
+
+precos = [1500, 1100, 1000, 3000]
+for preco in precos:
+    if preco > 2000:
+        imposto_ir = 0.3 * preco
+    else:
+        imposto_ir = 0.2 * preco
+    imposto_iss = 0.15 * preco
+    imposto_csll = 0.05 * preco
+
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    print(imposto_total)
+
+mais_precos = [2500, 2100, 1400, 1000]
+for preco in precos:
+    if preco > 2000:
+        imposto_ir = 0.3 * preco
+    else:
+        imposto_ir = 0.2 * preco
+    imposto_iss = 0.15 * preco
+    imposto_csll = 0.05 * preco
+
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    print(imposto_total)
+
+
+Slide 11
+def calcular_imposto_total(preco):
+    if preco > 2000:
+        imposto_ir = 0.3 * preco
+    else:
+        imposto_ir = 0.2 * preco
+    imposto_iss = 0.15 * preco
+    imposto_csll = 0.05 * preco
+    imposto_total = imposto_ir + imposto_iss + imposto_csll
+    #A Função deve devolver algo, retornar algo
+    #Sempre no Final da Função
+    return imposto_total
+
+for preco in precos:
+    imposto_total = calcular_imposto_total(preco)
+    print(imposto_total)
+
+mais_precos = [2500, 2100, 1400, 1000]
+for preco in mais_precos:
+    #imposto_total = calcular_imposto_total(preco)
+    print(calcular_imposto_total(preco))
+
+
+Variáveis criadas dentro da função são locais e não funcionam fora dela
