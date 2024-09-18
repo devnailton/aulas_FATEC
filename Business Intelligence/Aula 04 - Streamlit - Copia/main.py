@@ -7,31 +7,24 @@ import yfinance as yf
 # criar as funções de carregamento de dados
 	# Cotações do Itau - ITUB4 2010 a 2024
 @st.cache_data #Decorator dá uma nova funcionalidade à essa função, salvar as informações em cache
-def carregar_dados (empresas):
-	tickers = " ".join(empresas)
-	dados_acao = yf.Tickers(tickers)
+def carregar_dados (empresa):
+	dados_acao = yf.Ticker(empresa)
 	cotacoes_acao = dados_acao.history(period="1d", start="2010-01-01", end="2024-08-15")
-	print(cotacoes_acao)
-	cotacoes_acao = cotacoes_acao['Close']
+	#cotacoes_acao[['Close']]
+	cotacoes_acao = cotacoes_acao[['Close']]
 	return cotacoes_acao
 
 
-acoes = ["ITUB4.SA", "PETR4.SA", "VALE3.SA", "MGLU3.SA", "ABEV3.SA"]
-dados = carregar_dados(acoes)
+dados = carregar_dados("AGRO3.SA")
+print(dados)
+# prepara as visualizações
+
 
 #criar a interface do streamlit
 st.write("""
 	# Preço de Ações
 	O gráfico representa a evolução do preço das ações do Itaú (ITUB4) ao longo dos anos
 """) # markdown
-# prepara as visualizações - Agora são Filtros
-lista_acoes = st.multiselect("Escolha as Ações para visualizar", dados.columns)
-if lista_acoes:
-	dados = dados[lista_acoes]
-	if len(lista_acoes) == 1:
-		acao_unica = lista_acoes[0]
-		dados = dados.rename(columns={acao_unica: "Close"})
-
 
 #Criar o Gráfico
 st.line_chart(dados)
