@@ -14,7 +14,7 @@ export const AddNewTodo: React.FC<AddNewTodoProps>=({onPress, onChange, value})=
      <View style={styles.container}>
       <TextInput
        style={styles.inputField}
-       placeholder='Adicione uma nova tareefa'
+       placeholder='Adicione uma nova tarefa'
        placeholderTextColor='#808080'
        onChangeText={onChange}
        value={value}
