@@ -1,0 +1,1 @@
+from .modulo3 import funcao3

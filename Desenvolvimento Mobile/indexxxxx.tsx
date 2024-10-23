@@ -16,7 +16,7 @@ const App = () => {
       {/* Experiências */}
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Experiências</Text>
-        <Text style={styles.sectionContent}>- Desenvolvedor Backend na Apey Sistemas</Text>
+        <Text style={styles.sectionContent}>- Desenvolvedor Backend na APEYY Sistemas</Text>
         <Text style={styles.sectionContent}>- Professor de Tecnologia da Informação e Business Intelligence</Text>
         <Text style={styles.sectionContent}>- Consultor em Segurança de Dados e Engenharia Social</Text>
       </View>
