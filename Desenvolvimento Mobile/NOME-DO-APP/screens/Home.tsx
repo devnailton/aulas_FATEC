@@ -1,3 +1,5 @@
+//Arquivo Home.tsx
+
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { AddNewTodo } from '../components/AddNewTodo';
@@ -46,7 +48,7 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Lista de Tarefas Eduardo</Text>
+      <Text style={styles.title}>Lista de Tarefas Nailton</Text>
       <AddNewTodo onPress={handleTodoAdd} onChange={setNewTask} value={newTask} />
       
       {tasks.map((task) => (

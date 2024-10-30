@@ -20,7 +20,7 @@ export const AddNewTodo: React.FC<AddNewTodoProps>=({onPress, onChange, value})=
        value={value}
        />
      <TouchableOpacity onPress={onPress} style={styles.button}>
-      <View style={styles.iconButton}>
+      <View style={styles.icconButton}>
        <Text style={styles.textButton}>+</Text>
       </View>
      </TouchableOpacity>
