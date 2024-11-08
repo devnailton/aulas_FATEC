@@ -1,0 +1,15 @@
+A soma de 9.0 e 9.0 é: 18.0
+O resultado da divisão de 9.0 por 9.0 é: 1.0
+A área do retângulo de largura 9.0 e altura 9.0 é: 81.0
+A área do círculo com raio 8.0 é: 201.06192982974676
+O raio do círculo com área 8.0 é: 1.5957691216057308
+A soma de 9.0 e 9.0 é: 18.0
+O resultado da divisão de 9.0 por 9.0 é: 1.0
+A área do retângulo de largura 9.0 e altura 9.0 é: 81.0
+A área do círculo com raio 9.0 é: 254.46900494077323
+O raio do círculo com área 9.0 é: 1.692568750643269
+A soma de 9.0 e 9.0 é: 18.0
+O resultado da divisão de 9.0 por 9.0 é: 1.0
+A área do retângulo de largura 9.0 e altura 9.0 é: 81.0
+A área do círculo com raio 9.0 é: 254.46900494077323
+O raio do círculo com área 9.0 é: 1.692568750643269
