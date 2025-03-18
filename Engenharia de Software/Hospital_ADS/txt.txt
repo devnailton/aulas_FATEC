@@ -1,0 +1,7 @@
+https://dontpad.com/9090
+
+python -m venv venv
+.venv\Scripts\activate
+pip install django djangorestframework mysqlclient
+
+django-admin startproject app
